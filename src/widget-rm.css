@@ -1,0 +1,109 @@
+li:before{
+content:none!important;
+}
+
+li{
+padding-left: 10px!important;
+margin-top: 0px!important;
+}
+
+.widget-rm-quartier {
+  border: none;
+  color: #DD3627;
+  font: 15px Arial, monospace;
+  font-weight:bold;
+  padding: 0px;
+  text-shadow: 0px 0px 0px;
+  box-shadow: none;
+  outline: none;
+}
+.leaflet-tooltip-left.widget-rm-quartier::before {
+  border-left: none;
+}
+.leaflet-tooltip-right.widget-rm-quartier::before {
+  border-right: none;
+}
+
+.widget-rm-marker-cluster-small {
+    background-color: rgba(221, 54, 39, 0.6);
+}
+.widget-rm-marker-cluster-small div {
+    background-color: rgba(221, 54, 39, 0.6);
+}
+
+.widget-rm-marker-cluster-medium {
+    background-color: rgba(241, 211, 87, 0.6);
+}
+.widget-rm-marker-cluster-medium div {
+    background-color: rgba(240, 194, 12, 0.6);
+}
+
+.widget-rm-marker-cluster-large {
+    background-color: rgba(253, 156, 115, 0.6);
+}
+.widget-rm-marker-cluster-large div {
+    background-color: rgba(241, 128, 23, 0.6);
+}
+
+/* IE 6-8 fallback colors */
+.leaflet-oldie .widget-rm-marker-cluster-small {
+    background-color: rgba(221, 54, 39, 0.6);
+}
+.leaflet-oldie .widget-rm-marker-cluster-small div {
+    background-color: rgba(221, 54, 39, 0.6);
+}
+
+.leaflet-oldie .widget-rm-marker-cluster-medium {
+    background-color: rgb(241, 211, 87);
+}
+.leaflet-oldie .widget-rm-marker-cluster-medium div {
+    background-color: rgb(240, 194, 12);
+}
+
+.leaflet-oldie .widget-rm-marker-cluster-large {
+    background-color: rgb(253, 156, 115);
+}
+.leaflet-oldie .widget-rm-marker-cluster-large div {
+    background-color: rgb(241, 128, 23);
+}
+
+.widget-rm-marker-cluster {
+    background-clip: padding-box;
+    border-radius: 20px;
+}
+.widget-rm-marker-cluster div {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+
+    text-align: center;
+    border-radius: 15px;
+    font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.widget-rm-marker-cluster span {
+    line-height: 30px;
+}
+.easy-autocomplete-container ul {
+  background: none repeat scroll 0 0 #ffffff;
+  border-top: 1px dotted #ccc;
+  display: none;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  position: relative;
+  top: -1px;
+  max-height:150px; 
+  overflow-y:scroll !important; 
+}
+
+#addressSearch {
+  margin-top : 20px;
+  margin-bottom : 20px;
+  width: 90%;
+}
+
+#map {
+  margin-bottom: 30px;
+}
+
