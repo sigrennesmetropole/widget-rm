@@ -1,8 +1,8 @@
-li:before{
+#eac-container-addressSearch li:before{
 content:none!important;
 }
 
-li{
+#eac-container-addressSearch li{
 padding-left: 10px!important;
 margin-top: 0px!important;
 }
