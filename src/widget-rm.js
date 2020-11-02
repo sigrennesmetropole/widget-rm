@@ -333,14 +333,7 @@
                     break;
                 case 'distconfinement':
                     console.log('distance de confinement');
-                    
-                    var southWest = L.latLng(48.0732214985779009, -1.7590042766937635);
-                    northEast = L.latLng(48.1554485532821559, -1.6172213143614309);
-                    bounds = L.latLngBounds(southWest, northEast);
-
-                    map.fitBounds(bounds);
-            
-                    var url = 'https://api-secteur.sig.rennesmetropole.fr/v1/epsg:4326/quartier/';
+                    var url = 'https://api-secteur.sig.rennesmetropole.fr/v1/epsg:4326/quartier/'; // url obligatoire pour traitement des données
                     urlRva = 'https://api-rva.sig.rennesmetropole.fr/?key=a45f31dc19810d7b567e&version=1.0&format=json&epsg=3948&cmd=getfulladdresses&query=';
                     var sucessAjax = function(data) {
                         var markerExtent = [];
