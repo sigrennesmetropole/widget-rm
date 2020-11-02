@@ -341,7 +341,7 @@
                     map.fitBounds(bounds);
             
                     var url = 'https://api-secteur.sig.rennesmetropole.fr/v1/epsg:4326/quartier/';
-                    urlRva = 'https://api-rva.sig.rennesmetropole.fr/?key=a45f31dc19810d7b567e&version=1.0&format=json&epsg=3948&cmd=getfulladdresses&insee=35238&query=';
+                    urlRva = 'https://api-rva.sig.rennesmetropole.fr/?key=a45f31dc19810d7b567e&version=1.0&format=json&epsg=3948&cmd=getfulladdresses&query=';
                     var sucessAjax = function(data) {
                         var markerExtent = [];
 
