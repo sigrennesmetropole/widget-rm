@@ -154,7 +154,7 @@
                 }
             });
             
-            var domicileMarker, marker, polygon;
+            var domicileMarker, marker, polygon, circle;
             var urlRva;
 
             switch(parameters.type) {
@@ -331,6 +331,40 @@
                     });
                     }
                     break;
+                case 'distconfinement':
+                    console.log('distance de confinement');
+                    var url = 'https://api-secteur.sig.rennesmetropole.fr/v1/epsg:4326/quartier/'; // url obligatoire pour traitement des données
+                    urlRva = 'https://api-rva.sig.rennesmetropole.fr/?key=a45f31dc19810d7b567e&version=1.0&format=json&epsg=3948&cmd=getfulladdresses&query=';
+                    var sucessAjax = function(data) {
+                        var markerExtent = [];
+
+                        // Ajout domicile
+                        domicileMarker = L.marker(
+                            [data['adresseDomicile'].y, data['adresseDomicile'].x],
+                            {
+                                title: 'Domicile : ' + data['adresseDomicile'].addr3
+                            }
+                        ).addTo(map);
+                        domicileMarker.bindPopup('<b><font size="2">Votre domicile</font></b><br/>' + data['adresseDomicile'].addr3 ).openPopup();
+                        markerExtent.push(domicileMarker);
+                        
+                        // Ajout périmètre de circulation
+                        circle = L.circle([data['adresseDomicile'].y, data['adresseDomicile'].x], {
+                            color: '#44E000',
+                            weight:0.5,
+                            fillColor: '#9FDF83',
+                            fillOpacity: 0.5,
+                            radius: 1000
+                        }).addTo(map);
+                            
+                        markerExtent.push(circle);
+                        
+                        // Extent
+                        var group = new L.featureGroup(markerExtent);
+                        map.fitBounds(group.getBounds(), { padding: [50, 50] });
+                        
+                    }
+                    break;
                 default:
                     console.log('Le widget' + parameters.type + 'n\'existe pas.');   
             }
@@ -374,6 +408,9 @@
                                 }
                                 if(map.hasLayer(polygon)) {
                                     map.removeLayer(polygon);
+                                }
+                                if(map.hasLayer(circle)) {
+                                    map.removeLayer(circle);
                                 }
 
                                 // Appel success widget(type)
