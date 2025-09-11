@@ -241,10 +241,10 @@
                         //    contentPopup += data['ccas'].description + '<br/>';
                         //}
                         var footer = "";
-                        if(data['ccas'].idOrg != null){
-                                var url ='https://metropole.rennes.fr/organisme/' + data['ccas'].nom.replace(/[\u0300-\u036f]/g, "").replace(/'/g, " ").replace(/\//g, " ").toLowerCase().replace(/ /g,'-') + '-' + data['ccas'].idOrg  
-                                footer = '<a href="' + url + '" target="_blank">' + url + '</a>';
-                            }
+                        //if(data['ccas'].idOrg != null){
+                        //        var url ='https://metropole.rennes.fr/organisme/' + data['ccas'].nom.replace(/[\u0300-\u036f]/g, "").replace(/'/g, " ").replace(/\//g, " ").toLowerCase().replace(/ /g,'-') + '-' + data['ccas'].idOrg  
+                        //        footer = '<a href="' + url + '" target="_blank">' + url + '</a>';
+                        //    }
                         //if(data['ccas'].siteInternet != null){
                         //    footer = '<a href="http://' + data['ccas'].siteInternet + '" target="_blank">' + data['ccas'].siteInternet + '</a>';
                         //}
